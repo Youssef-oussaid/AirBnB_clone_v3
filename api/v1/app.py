@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """an api to return the status"""
 
+
 import os
 from flask import Flask, Blueprint
 from models import storage
@@ -10,9 +11,11 @@ app = Flask(__name__)
 
 app.register_blueprint(app_views)
 
+
 @app.teardown_appcontext
 def close_storage(exception):
     storage.close()
+
 
 if __name__ == "__main__":
     app.run(host=os.getenv('HBNB_API_HOST', '0.0.0.0'),
