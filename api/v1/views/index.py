@@ -9,3 +9,6 @@ from api.v1.views import app_views, storage
 def status():
     """return api status"""
     return jsonify({"status": "OK"})
+
+if __name__ == "__main__":
+    pass
