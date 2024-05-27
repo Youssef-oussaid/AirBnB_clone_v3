@@ -2,7 +2,7 @@
 """returns the status in a json form"""
 
 from flask import jsonify
-from api.v1.views import app_views
+from api.v1.views import app_views, storage
 
 
 @app_views.route('/status')
