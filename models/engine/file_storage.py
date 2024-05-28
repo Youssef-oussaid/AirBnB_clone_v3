@@ -89,7 +89,7 @@ class FileStorage:
         """Counts the number of objects in storage"""
         if cls is None:
             return len(self.__objects)
-        elif cls in classes.values():
+        elif cls in models.classes.values():
             count = sum(1 for obj in self.__objects.values() if isinstance(obj, cls))
             return count
         else:
